@@ -11,8 +11,10 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #ffffff;
+            color: #000000;
         }
+
+        /* Navigation Bar */
         nav {
             background-color: #333;
             color: white;
@@ -20,14 +22,17 @@
             display: flex;
             justify-content: space-around;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             font-size: 18px;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+
         section {
             margin: 20px auto;
             max-width: 800px;
@@ -35,6 +40,7 @@
             padding: 20px;
             border-radius: 10px;
         }
+
         button {
             background-color: #4CAF50;
             color: white;
@@ -43,9 +49,11 @@
             cursor: pointer;
             border-radius: 5px;
         }
+
         button:hover {
             background-color: #45a049;
         }
+
         textarea, input {
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -54,21 +62,68 @@
             width: 100%;
             max-width: 300px;
         }
+
+        /* Subscription Section */
+        #subscription {
+            background: none;
+        }
+
+        /* Centered Profile Section with Border */
         .profile-section {
-            margin-top: 40px;
+            background: none;
+            border: 2px solid #333; /* Solid black border */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px; /* Centered section with a limited width */
+            margin: 40px auto; /* Centering */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .profile-details {
-            text-align: left;
-            display: inline-block;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
+        .profile-details form {
+            width: 100%;
+            max-width: 400px; /* Limits form width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-details label {
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
         .profile-details input,
         .profile-details textarea {
-            margin-bottom: 15px;
+            width: 100%;
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 5px;
         }
-        .image-section img {
-            margin-top: 20px;
-            border-radius: 10px;
-            max-width: 100%;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-section {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -81,7 +136,7 @@
     </nav>
 
     <!-- Subscription Page Content -->
-    <section id="subscription" style="background: none;">
+    <section id="subscription">
         <h1>Subscribe to This Website and Discover More About the Software World 🌐</h1>
         <p>Enter your email below to subscribe for updates and exclusive benefits.</p>
         <textarea placeholder="Enter your email to subscribe" rows="3"></textarea><br>
@@ -94,28 +149,28 @@
         <img src="https://franchiseindia.s3.ap-south-1.amazonaws.com/uploads/content/fi/art/5bf7e2a3d4df3.jpeg" alt="Learning Image" width="50%">
     </section>
 
-    <!-- Profile Details Section -->
-    <section class="profile-section" style="background: none;">
+    <!-- Centered Profile Details Section -->
+    <section class="profile-section">
         <h1>Your Profile Details</h1>
         <div class="profile-details">
             <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" placeholder="Enter your name"><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
                 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" placeholder="Enter your email"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
                 
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" placeholder="Enter your phone number"><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
                 
-                <label for="dob">Date of Birth:</label><br>
-                <input type="date" id="dob"><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob">
                 
-                <label for="bio">Short Bio:</label><br>
-                <textarea id="bio" rows="4" placeholder="Write a short bio about yourself"></textarea><br>
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" rows="4" placeholder="Write a short bio about yourself"></textarea>
                 
-                <label for="file-upload">Upload a Resume to get know about you and can suggest some opportunities : </label><br>
-                <input type="file" id="file-upload" accept="image/*, .pdf, .docx"><br><br>
+                <label for="file-upload">Upload a Resume to get to know about you and suggest some opportunities:</label>
+                <input type="file" id="file-upload" accept="image/*, .pdf, .docx">
                 
                 <button type="submit">Save Profile</button>
             </form>
