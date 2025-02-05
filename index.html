@@ -6,20 +6,30 @@
     <title>Video Player with Multiple Qualities and YouTube Embed</title>
     <style>
         body {
-            background-image: url(https://www.textures4photoshop.com/tex/thumbs/animated-sparkle-overlay-for-photoshop-thumb38.gif);
-            color: beige;
+            background-image: url('17973908.jpg');
+            color: rgb(0, 0, 0);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
         .video-container {
-            background-color: black;
             position: relative;
             max-width: 100%;
             margin: auto;
             text-align: center;
             margin-top: 20px;
+            background-image: url('background_image_url.jpg'); /* Replace with your desired image URL */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect */
+        }
+
+        .video-container iframe {
+            border-radius: 5px; /* Optional: rounded corners for the video */
+            max-width: 100%; /* Ensure the video takes up the full container width */
         }
 
         .quality-selector {
@@ -27,19 +37,21 @@
             top: 10px;
             right: 10px;
             background: rgba(0, 0, 0, 0.7);
-            color: white;
+            color: rgb(0, 0, 0);
             padding: 5px 10px;
             border-radius: 5px;
             cursor: pointer;
         }
 
+        /* Comment Section with Transparent Background */
         .comments {
             margin-top: 20px;
             max-width: 80%;
             margin: auto;
-            background-color: black;
             padding: 20px;
             border-radius: 10px;
+            background-color: transparent; /* Make the background transparent */
+            border: 2px solid #000000; /* Solid border for the comment section */
         }
 
         .comment-list div {
@@ -50,14 +62,16 @@
             margin-right: 5px;
         }
 
+        /* Medium-sized Comment Box */
         .comment-input {
             margin-top: 10px;
-            width: 100%;
+            width: 50%; /* Adjusted to make the comment box medium-sized */
             padding: 10px;
-            background-color: #333;
-            color: beige;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
             border: 1px solid #555;
             border-radius: 5px;
+            font-size: 16px;
         }
 
         button {
