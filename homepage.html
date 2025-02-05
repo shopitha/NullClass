@@ -6,14 +6,33 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* General Styles */
         body {
             background-color: white;
-            color: rgb(255, 253, 253);
+            color: rgb(0, 0, 0);
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
+        /* Slide-in Animation */
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply animation to the main container */
+        .main-content {
+            animation: slideInFromLeft 1s ease-out;
+        }
+
+        /* Navigation Bar */
         nav {
             background-color: #333;
             overflow: hidden;
@@ -24,7 +43,6 @@
         }
 
         nav a {
-            float: left;
             color: beige;
             text-align: center;
             padding: 14px 20px;
@@ -55,14 +73,16 @@
             cursor: pointer;
         }
 
+        /* Home Section */
         #home {
             text-align: center;
             padding: 20px;
         }
 
+        /* Courses Section */
         #courses {
             padding: 40px;
-            background-color: transparent; /* Remove background */
+            background-color: transparent;
         }
 
         .course-list {
@@ -72,14 +92,19 @@
             flex-wrap: wrap;
         }
 
+        /* Transparent Course Cards */
         .course-card {
-            background-color: transparent; /* Remove background color */
-            border: 1px solid #ddd;
+            background-color: transparent; /* Fully transparent background */
+            border: 1px solid #ddd; /* Subtle border */
             padding: 20px;
             width: 250px;
             border-radius: 8px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: none; /* Removes shadow */
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
         }
 
         .course-card img {
@@ -99,6 +124,34 @@
         .course-card button:hover {
             background-color: #555;
         }
+        h1 {
+            font-size: 4rem; /* Make the text big */
+            font-weight: bold; /* Make the text bold */
+            text-align: center;
+            margin: 20px 0;
+            color: rgb(0, 0, 0); /* Or any other color you prefer */
+        }
+
+        /* Make it responsive */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2rem; /* Adjust the font size for smaller screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2rem; /* Adjust even more for very small screens */
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .course-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -110,54 +163,56 @@
             <a href="subscription.html">Subscription Page</a>
         </div>
         <div class="nav-right">
-            <a href="subscription.html"> <!-- Wrap the profile icon in an anchor tag -->
+            <a href="subscription.html">
                 <div class="profile-icon" title="Profile"></div>
             </a>
         </div>
     </nav>
 
-    <!-- Home Page Content -->
-    <section id="home">
-        <center>
-            <h1>To Search About Courses......</h1>
-            <p><i>💻 Software development is the process of designing, coding, testing, and maintaining software applications. It involves creating programs that run on computers, mobile devices, and other technology platforms. Developers use programming languages such as Java, Python, and C++ to build software that meets the needs of users and solves specific problems. This field offers a wide range of career opportunities, including developing mobile apps, desktop applications, and enterprise-level systems, with a focus on delivering high-quality, efficient, and user-friendly solutions.</i></p>
+    <!-- Main Content with Slide-in Animation -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home">
+            <center>
+                <h1>To Search About Courses...</h1>
+                <p><i>💻 Software development is the process of designing, coding, testing, and maintaining software applications...</i></p>
+                <p><i>💻 Web development refers to the creation and maintenance of websites and web applications...</i></p>
+            </center>
+        </section>
 
-            <p><i>💻 Web development refers to the creation and maintenance of websites and web applications. It encompasses both front-end development, which involves the design and functionality of a website that users interact with, and back-end development, which handles the server-side and database management. Web developers use languages like HTML, CSS, JavaScript, and server-side frameworks to build responsive and dynamic websites. With the growing importance of online presence, web development is a rapidly evolving field offering exciting opportunities in building interactive and user-centric web platforms.</i></p>
-        </center>
-    </section>
+        <!-- Courses Section -->
+        <section id="courses">
+            <center>
+                <h2>Top Software Development Courses</h2>
+                <h1>Suggested Some Useful Courses Below 👇</h1>
 
-    <!-- Courses Section -->
-    <section id="courses">
-        <center>
-            <h2>Top Software Development Courses</h2>
-            <h1>Suggested Some Useful Courses Below 👇</h1>
+                <div class="course-list">
+                    <!-- Course 1 -->
+                    <div class="course-card">
+                        <img src="https://i.pinimg.com/originals/02/74/20/0274207612d515f49012c87803a9e631.gif" alt="Web Development Bootcamp">
+                        <h3>Web Development Bootcamp</h3>
+                        <p>Learn to build modern web applications from scratch using HTML, CSS, JavaScript, and more.</p>
+                        <button onclick="window.location.href='https://www.udemy.com/course/the-web-developer-bootcamp/'">Enroll Now</button>
+                    </div>
 
-            <div class="course-list">
-                <!-- Course 1 -->
-                <div class="course-card">
-                    <img src="https://i.pinimg.com/originals/02/74/20/0274207612d515f49012c87803a9e631.gif" alt="Web Development Bootcamp">
-                    <h3>Web Development Bootcamp</h3>
-                    <p>Learn to build modern web applications from scratch using HTML, CSS, JavaScript, and more.</p>
-                    <button onclick="window.location.href='https://www.udemy.com/course/the-web-developer-bootcamp/'">Enroll Now</button>
+                    <!-- Course 2 -->
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9Een73PSg53KG5Wcqlz2l95qZ8jTt0RcwA&s" alt="JavaScript Algorithms and Data Structures">
+                        <h3>JavaScript Algorithms and Data Structures</h3>
+                        <p>Master the fundamental algorithms and data structures in JavaScript to build efficient programs.</p>
+                        <button onclick="window.location.href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/'">Enroll Now</button>
+                    </div>
+
+                    <!-- Course 3 -->
+                    <div class="course-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjcMGnbdyQ6mb0opAZ4sfDRXjSyO2irI-XHXtaKmP8jrFJtVfjmomC2KXmVBVvV5YoxU&usqp=CAU" alt="React - The Complete Guide">
+                        <h3>React - The Complete Guide</h3>
+                        <p>Learn how to build and deploy advanced React apps, including hooks, state management, and more.</p>
+                        <button onclick="window.location.href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/'">Enroll Now</button>
+                    </div>
                 </div>
-
-                <!-- Course 2 -->
-                <div class="course-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc9Een73PSg53KG5Wcqlz2l95qZ8jTt0RcwA&s" alt="JavaScript Algorithms and Data Structures">
-                    <h3>JavaScript Algorithms and Data Structures</h3>
-                    <p>Master the fundamental algorithms and data structures in JavaScript to build efficient programs.</p>
-                    <button onclick="window.location.href='https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/'">Enroll Now</button>
-                </div>
-
-                <!-- Course 3 -->
-                <div class="course-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjcMGnbdyQ6mb0opAZ4sfDRXjSyO2irI-XHXtaKmP8jrFJtVfjmomC2KXmVBVvV5YoxU&usqp=CAU" alt="React - The Complete Guide">
-                    <h3>React - The Complete Guide</h3>
-                    <p>Learn how to build and deploy advanced React apps, including hooks, state management, and more.</p>
-                    <button onclick="window.location.href='https://www.udemy.com/course/react-the-complete-guide-incl-redux/'">Enroll Now</button>
-                </div>
-            </div>
-        </center>
-    </section>
+            </center>
+        </section>
+    </div>
 </body>
 </html>
