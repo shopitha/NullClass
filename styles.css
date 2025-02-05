@@ -1,10 +1,22 @@
-body {
-    background-image: url(https://www.textures4photoshop.com/tex/thumbs/animated-sparkle-overlay-for-photoshop-thumb38.gif);
+/* body {
+     background-image: 17973908.jpg;
     color: beige;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+} */
+body {
+    background-image: url('17973908.jpg'); /* Replace with the correct path or URL */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Navigation Bar */
 nav {
@@ -65,14 +77,14 @@ section {
     width: 100%;
     padding: 10px;
     background-color: #333;
-    color: beige;
+    color: rgb(0, 0, 0);
     border: 1px solid #555;
     border-radius: 5px;
 }
 
 button {
     background-color: #555;
-    color: beige;
+    color: rgb(0, 0, 0);
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -100,7 +112,7 @@ section {
 }
 
 .course-card {
-    color: beige;
+    color: rgb(0, 0, 0);
     padding: 20px;
     border-radius: 10px;
     width: 250px;
@@ -129,7 +141,7 @@ section {
 
 .course-card button {
     background-color: #555;
-    color: beige;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
